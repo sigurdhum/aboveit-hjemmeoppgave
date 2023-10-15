@@ -1,0 +1,54 @@
+main {
+    max-width: 60ch;
+    margin: auto;
+}
+
+.accordian {
+    margin-block: 1rem;
+    padding: 1rem;
+    background: hsla(200, 8%, 92%, 0.4);
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-rows: 1fr 0fr;
+    transition: grid-template-rows 500ms;
+    cursor: pointer;
+}
+
+.accordian>div {
+    overflow: hidden;
+}
+
+*:focus-visible{
+    /*ikke helt perfekt med tanke på at den fokuserer på innholdet i accordianenene også (sorry, tok det på norsk nå :) liteeeeen tid) */
+    outline: 2px solid black;
+}
+
+.accordian[aria-hidden="false"]{
+    grid-template-rows: 1fr;
+}
+
+.innhold {
+    display: flex;
+    gap: 1rem;
+}
+
+.innhold > img {
+    max-width: 150px;
+    aspect-ratio: 1;
+    border-radius: 0.25rem;
+}
+
+button{
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 0.25em;
+    background-color: lightblue;
+    transition: background-color 200ms;
+}
+
+button:hover,
+button:active{
+
+    background-color: blue;
+    color: white;
+}
